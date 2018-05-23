@@ -1,0 +1,397 @@
+* { padding:0; margin: 0; box-sizing: border-box; background: no-repeat 0 0; background-size: 100% auto; font-size: inherit; font-weight: normal; font-style: normal; text-decoration: none; line-height: inherit; font-family: microsoft yahei; }
+body {background: #ddd;}
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #3A3091;
+}
+.app>* {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.load center {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 100%;
+    margin-top: -35%;
+}
+.load figure {
+    -webkit-animation: ani-load2 1s both ease-in-out infinite;
+    width: 20%;
+    padding-bottom: 30%;
+    margin: 0 auto;
+    background-image: url(../img/load1.png);
+}
+.load h6 {
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #52DBC7;
+}
+.load h6 q {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    text-align: left;
+    margin-left: 0.1em;
+}
+q {
+    quotes: none;
+}
+.load h6 q span {
+    -webkit-animation: ani-load1 0.8s linear infinite both;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+}
+footer p {
+    color: #D67C9C;
+    text-align: center;
+    font-size: 0.8em;
+}
+.s1 {
+    background-image: url(../img/s1-bg.jpg);
+    background-position: center;
+}
+.s1 center {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: 25%;
+}
+.s1 center h4 {
+    display: inline-block;
+    padding: 0.3em 0.3em;
+    border-radius: 0.9em;
+    background: #046EB8;
+    border: solid #000 0.15em;
+}
+.s1 center h4 a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 0.7em;
+    padding: 0.4em 1.4em;
+    border-radius: 0.5em;
+    background: #FE908F;
+    border: solid #000 0.13em;
+}
+.s1 center h4 a:active {
+    background: #FE4030;
+}
+
+.s2 {
+    background: #FF3F32;
+}
+.s2 header {
+    position: absolute;
+    z-index: 10;
+    width: auto;
+    margin: 2% 0 0 2%;
+}
+.s2 header a {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em 1em 0;
+}
+.s2 header a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
+    font-weight: 2000;
+    width: 1em;
+    height: 1em;
+    margin: -0.15em 0.1em 0 0;
+    background: url(../img/back.png) no-repeat 0 80%;
+    background-size: 100% auto;
+}
+.s2 figure {
+    position: absolute;
+    width: 72%;
+    padding-bottom: 117%;
+    top: 50%;
+    margin: -69% 0 0 14%;
+    background-color: #fff;
+}
+.s2 figure .body {
+    position: absolute;
+    width: 84%;
+    height: 72.5%;
+    margin: 0% 8%;
+    top: 21.5%;
+    z-index: 2
+}
+.s2 figure p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.s2 figure .title {
+    background-image: url(../img/title.jpg);
+    z-index: 1;
+}
+.s2 figure .bg { z-index: 2; }
+.s2 figure .animal { z-index: 3; }
+.s2 figure .organ { z-index: 4; }
+.s2 figure .person { z-index: 5; }
+.s2 footer {
+    top: 50%;
+    margin-top: 51%;
+    padding: 0 8%;
+}
+.s2 footer h3 {
+    float: right;
+    /*margin-top: 1%;*/
+    background: #52DBC7;
+    padding: 0.5em;
+    border: solid #000 0.2em;
+    border-radius: 0.9em;
+}
+.s2 footer h3 a {
+    display: block;
+    font-size: 1em;
+    color: #fff;
+    background: #026EB7;
+    border: solid #000 0.2em;
+    text-align: center;
+    overflow: hidden;
+    width: 3.5em;
+    height: 3.5em;
+    line-height: 1.5em;
+    border-radius: 0.6em;
+    -webkit-tap-highlight-color: transparent;
+}
+.s2 footer h3 a:active {
+    background: #FF3F32;
+}
+.s2 footer ol {
+    position: absolute;
+    white-space: nowrap;
+    height: 5.5em;
+}
+.s2 footer ol li {
+    counter-increment: num 1;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 3.6em;
+    padding-top: 3.6em;
+    margin: 0 0.22em;
+    background: rgba(15,15,15,0.5);
+    border-radius: 100%;
+}
+.s2 footer ol li:nth-child(1):after { content: '背景'; }
+.s2 footer ol li:nth-child(2):after { content: '动物'; }
+.s2 footer ol li:nth-child(3):after { content: '器官'; }
+.s2 footer ol li:nth-child(4):after { content: '人物'; }
+.s2 footer ol li:after { 
+    font-family: microsoft yahei;
+    position: absolute;
+    bottom: -1.25em;
+    left: 10%;
+    width: 80%;
+    font-size: 0.8em;
+    line-height: 1em;
+    color: #fff;
+    /*padding-top: 0.3em;*/
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 0.6em;
+ }
+.s2 ol.selected li {
+    display: none;
+}
+.s2 ol.selected li.curr {
+    display: block;
+}
+.s2 footer ul {
+    white-space: nowrap;
+    height: 5.5em;
+}
+.s2 footer ul li {
+    counter-increment: num 1;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 3.6em;
+    padding-top: 3.6em;
+    margin: 0 0.1em;
+    background-size: 100% auto;
+    background-position: center;
+}
+.s2 footer ul li:after {
+    content: '00' counter(num);
+    font-family: mvm;
+    position: absolute;
+    bottom: -1.25em;
+    left: 10%;
+    width: 80%;
+    font-size: 1.1em;
+    line-height: 1em;
+    /*padding-top: 0.3em;*/
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 0.6em;
+}
+.s2 footer ul li.cur:after {
+    background: #fff;
+}
+.s2 footer menu {
+    position: relative;
+    margin: 0 23% 0 22%;
+    margin-left: 4.1em;
+    overflow: hidden;
+}
+.s2 footer menu>div {
+    display: inline-block;
+}
+
+
+.s3 {
+    background: #52DBC7;
+}
+.s3 center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3A3091;
+    z-index: 10;
+}
+.s3 center img {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    margin: -20% 0 0 -10%;
+    -webkit-animation: roundLoop1 0.5s linear infinite both;
+}
+.s3 center h6 {
+    position: absolute;
+    top: 50%;
+    width: 8em;
+    text-align: left;
+    color: #fff;
+    margin: 7% 0 0 42%;
+}
+.s3 center h6 q {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    text-align: left;
+    margin-left: 0.1em;
+}
+.s3 center h6 span {
+    -webkit-animation: ani-load1 0.8s linear infinite both;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.s3 figure {
+    position: absolute;
+    width: 72%;
+    padding-bottom: 117%;
+    top: 50%;
+    margin: -69% 0 0 14%;
+    background-color: #fff;
+}
+.s3 figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.s3 footer {
+    top: 50%;
+    margin-top: 50%;
+    text-align: center;
+    /*z-index: 11;*/
+}
+.s3 footer a {
+    display: inline-block;
+    /*font-size: 0.9em;*/
+    width: 16%;
+    padding-top: 4.3em;
+    margin: 0 1.5em;
+    color: #3C2E8C;
+    background: #222;
+}
+.s3 footer a.btn1 { background: url(../img/return.png) no-repeat; background-size: 100% auto;}
+.s3 footer a.btn2 { background: url(../img/save.png) no-repeat; background-size: 100% auto;}
+.s3 footer a.btn3 { background: url(../img/share.png) no-repeat; background-size: 100% auto;}
+
+.share {
+    background: #3A3091;
+}
+.share header {
+    position: absolute;
+    z-index: 10;
+    width: auto;
+    margin: 5% 0 0 5%;
+}
+.share header a {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em 1em 0;
+}
+.share header a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 4em;
+    font-weight: 2000;
+    width: 0.8em;
+    height: 0.8em;
+    margin: -0.15em 0.1em 0 0;
+    background: url(../img/back.png) no-repeat 0 80%;
+    background-size: 100% auto;
+}
+.share center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/share.jpg);
+    background-position: top;
+}
+
+
+
+
+
+
+
+/*动画*/
+@-webkit-keyframes ani-load1{
+    0%{ width: 0;}
+    100%{ width: 100%;}
+}
+@-webkit-keyframes ani-load2{
+    0%{ transform: translateY(-1.5%);}
+    50%{ transform: translateY(1.5%);}
+    100%{ transform: translateY(-1.5%);}
+}
+@-webkit-keyframes roundLoop1{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
