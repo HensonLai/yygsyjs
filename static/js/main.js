@@ -96,7 +96,7 @@ app.bgScroll = new IScroll($(".s2 menu")[0], {click: true, scrollY:false, scroll
 setTimeout(function() {
     $('.load').hide().remove();
     $('.s1').show();
-}, 10);
+}, 5000);
 
 // s1  点击开始生成
 $('.s1 h4 a').click(function() {
@@ -144,7 +144,7 @@ $(".s2 footer h3 a").click(function() {
     slideTo('.s3');
 
     $(".s3 center").show();
-    createPoster();
+    setTimeout(function() { createPoster(); }, 500);
     setTimeout(function() {$(".s3 center").hide()}, 2000);
 });
 
