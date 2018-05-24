@@ -102,6 +102,7 @@ setTimeout(function() {
 $('.s1 h4 a').click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.s2');
+    $("body").css('background', '#FF3F31');
     app.bgScroll.refresh();
     app.bgScroll.scrollTo(0,0,0);
 });
@@ -110,6 +111,7 @@ $('.s1 h4 a').click(function() {
 $(".s2 header a").click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.s1');
+    $("body").css('background', '#393091');
 });
 $(".s2 ol li").click(function(){
     var li = $(this);
@@ -143,9 +145,10 @@ $(".s2 footer h3 a").click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.s3');
 
+    $("body").css('background', '#393091');
     $(".s3 center").show();
     setTimeout(function() { createPoster(); }, 500);
-    setTimeout(function() {$(".s3 center").hide()}, 2000);
+    setTimeout(function() {$(".s3 center").hide(); $("body").css('background', '#52DBC7');}, 2000);
 });
 
 function extractUrl(input)
@@ -184,10 +187,12 @@ function createPoster() {
 $(".s3 footer .btn1").click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.s2');
+    $("body").css('background', '#FF3F31');
 });
 $(".s3 footer .btn3").click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.share');
+    $("body").css('background', '#393091');
 });
 
 // share
