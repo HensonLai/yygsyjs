@@ -68,7 +68,7 @@ app.setSizeCallback = undefined;
 app.setSize = function(){
     // if(window.$ && $('.s3>center').is(':visible')){ return; }
     var fun = function(){
-        var aspect = 0.7;
+        var aspect = 0.63;
         var el_app = document.querySelector('.app');
         app.width = window.innerWidth;
         app.height = window.innerHeight;
@@ -96,7 +96,7 @@ app.bgScroll = new IScroll($(".s2 menu")[0], {click: true, scrollY:false, scroll
 setTimeout(function() {
     $('.load').hide().remove();
     $('.s1').show();
-}, 8000);
+}, 10);
 
 // s1  点击开始生成
 $('.s1 h4 a').click(function() {
@@ -107,6 +107,10 @@ $('.s1 h4 a').click(function() {
 });
 
 // s2 
+$(".s2 header a").click(function() {
+    setTimeout(function(){ app.sound.click.play(); });
+    slideTo('.s1');
+});
 $(".s2 ol li").click(function(){
     var li = $(this);
     if(li.addClass('curr').parent('ol').hasClass('selected')) {
@@ -133,11 +137,9 @@ $(".s2 ul li").click(function() {
     var img = $(this).attr('data-img');
     $(".s2 figure p:eq("+figure_index+")").css('background-image', 'url('+img+')');
 
-
-
 });
 
-$(".s2 footer h3").click(function() {
+$(".s2 footer h3 a").click(function() {
     setTimeout(function(){ app.sound.click.play(); });
     slideTo('.s3');
 

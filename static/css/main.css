@@ -1,4 +1,4 @@
-* { padding:0; margin: 0; box-sizing: border-box; background: no-repeat 0 0; background-size: 100% auto; font-size: inherit; font-weight: normal; font-style: normal; text-decoration: none; line-height: inherit; font-family: microsoft yahei; }
+* { padding:0; margin: 0; box-sizing: border-box; background: no-repeat 0 0; background-size: 100% auto; background-position: center; font-size: inherit; font-weight: normal; font-style: normal; text-decoration: none; line-height: inherit; font-family: microsoft yahei; }
 body {background: #ddd;}
 .app {
     position: relative;
@@ -6,7 +6,7 @@ body {background: #ddd;}
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
-    background-color: #3A3091;
+    /*background-color: #3A3091;*/
 }
 .app>* {
     display: none;
@@ -18,23 +18,21 @@ body {background: #ddd;}
     overflow: hidden;
 }
 
+.load {
+    background-image: url(../img/load-bg.png);
+}
 .load center {
     position: absolute;
     left: 0%;
     top: 50%;
     width: 100%;
-    margin-top: -35%;
-}
-.load figure {
-    -webkit-animation: ani-load2 1s both ease-in-out infinite;
-    width: 20%;
-    padding-bottom: 30%;
-    margin: 0 auto;
-    background-image: url(../img/load1.png);
+    margin-top: 22%;
 }
 .load h6 {
-    font-size: 1.15em;
+    font-size: 1.8em;
+    font-family: 'microsoft yahei';
     font-weight: bold;
+    letter-spacing: 0.09em;
     color: #52DBC7;
 }
 .load h6 q {
@@ -42,7 +40,7 @@ body {background: #ddd;}
     vertical-align: middle;
     width: 1.5em;
     text-align: left;
-    margin-left: 0.1em;
+    margin-left: 0.23em;
 }
 q {
     quotes: none;
@@ -64,78 +62,51 @@ footer p {
     font-size: 0.8em;
 }
 .s1 {
-    background-image: url(../img/s1-bg.jpg);
-    background-position: center;
+    background-image: url(../img/s1-bg.png);
 }
 .s1 center {
     position: absolute;
     width: 100%;
     top: 50%;
-    margin-top: 25%;
+    margin-top: 23.8%;
 }
 .s1 center h4 {
     display: inline-block;
-    padding: 0.3em 0.3em;
-    border-radius: 0.9em;
-    background: #046EB8;
-    border: solid #000 0.15em;
+    width: 9em;
+    height: 3.5em;    
 }
 .s1 center h4 a {
     display: inline-block;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 0.7em;
-    padding: 0.4em 1.4em;
-    border-radius: 0.5em;
-    background: #FE908F;
-    border: solid #000 0.13em;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/s1-btn1.png);
 }
 .s1 center h4 a:active {
-    background: #FE4030;
+    background-image: url(../img/s1-btn2.png);
 }
 
 .s2 {
-    background: #FF3F32;
+    background-image: url(../img/s2-bg.png);
 }
 .s2 header {
     position: absolute;
     z-index: 10;
     width: auto;
-    margin: 2% 0 0 2%;
+    margin: 5% 0 0 10%;
 }
 .s2 header a {
     display: inline-block;
     font-weight: bold;
-    padding: 0 0.5em 1em 0;
+    width: 4.5em;
+    height: 2.5em;
 }
-.s2 header a:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 2em;
-    font-weight: 2000;
-    width: 1em;
-    height: 1em;
-    margin: -0.15em 0.1em 0 0;
-    background: url(../img/back.png) no-repeat 0 80%;
-    background-size: 100% auto;
-}
+
 .s2 figure {
     position: absolute;
-    width: 72%;
-    padding-bottom: 117%;
+    width: 79.8%;
+    padding-bottom: 121.6%;
     top: 50%;
-    margin: -69% 0 0 14%;
-    background-color: #fff;
-}
-.s2 figure .body {
-    position: absolute;
-    width: 84%;
-    height: 72.5%;
-    margin: 0% 8%;
-    top: 21.5%;
-    z-index: 2
+    margin: -67.5% 0 0 10.1%;
 }
 .s2 figure p {
     position: absolute;
@@ -145,7 +116,7 @@ footer p {
     height: 100%;
 }
 .s2 figure .title {
-    background-image: url(../img/title.jpg);
+    background-image: url(../img/title.png);
     z-index: 1;
 }
 .s2 figure .bg { z-index: 2; }
@@ -154,50 +125,38 @@ footer p {
 .s2 figure .person { z-index: 5; }
 .s2 footer {
     top: 50%;
-    margin-top: 51%;
-    padding: 0 8%;
+    margin-top: 58%;
+    padding: 0 10.1%;
 }
 .s2 footer h3 {
     float: right;
-    /*margin-top: 1%;*/
-    background: #52DBC7;
-    padding: 0.5em;
-    border: solid #000 0.2em;
-    border-radius: 0.9em;
+    margin-top: 0.25em;
 }
 .s2 footer h3 a {
     display: block;
-    font-size: 1em;
-    color: #fff;
-    background: #026EB7;
-    border: solid #000 0.2em;
     text-align: center;
     overflow: hidden;
-    width: 3.5em;
-    height: 3.5em;
-    line-height: 1.5em;
-    border-radius: 0.6em;
-    -webkit-tap-highlight-color: transparent;
-}
-.s2 footer h3 a:active {
-    background: #FF3F32;
+    width: 3.6em;
+    height: 3.8em;
+    background-image: url(../img/s2-btn.png);
 }
 .s2 footer ol {
     position: absolute;
     white-space: nowrap;
-    height: 5.5em;
+    height: 5.9em;
 }
 .s2 footer ol li {
+    position: relative;
     counter-increment: num 1;
     list-style: none;
-    position: relative;
     display: inline-block;
-    width: 3.6em;
-    padding-top: 3.6em;
-    margin: 0 0.22em;
-    background: rgba(15,15,15,0.5);
-    border-radius: 100%;
+    width: 3.15em;
+    padding-top: 3.7em;
+    background-position: top;
+    /*border-radius: 100%;*/
+    margin-right: 0.9em;
 }
+.s2 footer ol li:last-child { margin-right: 0; }
 .s2 footer ol li:nth-child(1):after { content: '背景'; }
 .s2 footer ol li:nth-child(2):after { content: '动物'; }
 .s2 footer ol li:nth-child(3):after { content: '器官'; }
@@ -205,14 +164,12 @@ footer p {
 .s2 footer ol li:after { 
     font-family: microsoft yahei;
     position: absolute;
-    bottom: -1.25em;
     left: 10%;
     width: 80%;
     font-size: 0.8em;
     line-height: 1em;
+    height: 1.2em;
     color: #fff;
-    /*padding-top: 0.3em;*/
-    font-weight: bold;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -229,39 +186,19 @@ footer p {
     height: 5.5em;
 }
 .s2 footer ul li {
+    position: relative;
     counter-increment: num 1;
     list-style: none;
-    position: relative;
     display: inline-block;
-    width: 3.6em;
-    padding-top: 3.6em;
-    margin: 0 0.1em;
-    background-size: 100% auto;
+    width: 3em;
+    padding-top: 2.9em;
+    margin-top: 0.33em;
+    background-size: auto 100%;
     background-position: center;
-}
-.s2 footer ul li:after {
-    content: '00' counter(num);
-    font-family: mvm;
-    position: absolute;
-    bottom: -1.25em;
-    left: 10%;
-    width: 80%;
-    font-size: 1.1em;
-    line-height: 1em;
-    /*padding-top: 0.3em;*/
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    border-radius: 0.6em;
-}
-.s2 footer ul li.cur:after {
-    background: #fff;
 }
 .s2 footer menu {
     position: relative;
-    margin: 0 23% 0 22%;
-    margin-left: 4.1em;
+    margin: 0 4em 0 3.5em;
     overflow: hidden;
 }
 .s2 footer menu>div {
@@ -309,10 +246,10 @@ footer p {
 }
 .s3 figure {
     position: absolute;
-    width: 72%;
-    padding-bottom: 117%;
+    width: 79.8%;
+    padding-bottom: 121.6%;
     top: 50%;
-    margin: -69% 0 0 14%;
+    margin: -67.5% 0 0 10.1%;
     background-color: #fff;
 }
 .s3 figure img {
@@ -324,23 +261,31 @@ footer p {
 }
 .s3 footer {
     top: 50%;
-    margin-top: 50%;
-    text-align: center;
-    /*z-index: 11;*/
+    margin-top: 58%;
+    padding: 0 10.1%;
 }
 .s3 footer a {
+    position: relative;
     display: inline-block;
-    /*font-size: 0.9em;*/
-    width: 16%;
-    padding-top: 4.3em;
-    margin: 0 1.5em;
-    color: #3C2E8C;
-    background: #222;
+    width: 15%;
+    padding-top: 3.5em;
 }
-.s3 footer a.btn1 { background: url(../img/return.png) no-repeat; background-size: 100% auto;}
-.s3 footer a.btn2 { background: url(../img/save.png) no-repeat; background-size: 100% auto;}
-.s3 footer a.btn3 { background: url(../img/share.png) no-repeat; background-size: 100% auto;}
-
+.s3 footer a:after {
+    position: absolute;
+    width: 6em;
+    height: 1em;
+    left: -0.45em;
+    color: #3C2E8C;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+.s3 footer a.btn1:after { content: '返回编辑'; }
+.s3 footer a.btn2:after { content: '找按保存'; }
+.s3 footer a.btn3:after { content: '发送分享'; }
+.s3 footer a.btn1 { margin-left: 7.5%; background: url(../img/return.png) no-repeat; background-size: 100% auto;}
+.s3 footer a.btn2 { margin-left: 19%; background: url(../img/save.png) no-repeat; background-size: 100% auto;}
+.s3 footer a.btn3 { margin-left: 18%; background: url(../img/share.png) no-repeat; background-size: 100% auto;}
 .share {
     background: #3A3091;
 }
@@ -371,8 +316,8 @@ footer p {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../img/share.jpg);
-    background-position: top;
+    background-image: url(../img/share1.png);
+    background-position: center;
 }
 
 
